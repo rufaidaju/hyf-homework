@@ -1,0 +1,23 @@
+
+.header-content{
+display: flex;
+flex-direction:column;
+/* justify-content: center; */
+align-items: center;
+
+}
+#input {
+    padding: 5px;
+    margin :5px;
+}
+
+.winner{
+    display:flex;
+    /* justify-content: center; */
+}
+#s-presser ,#l-presser{
+    width:48% ; 
+    padding :10px;
+    text-align: center;
+}
+
