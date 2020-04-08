@@ -6,18 +6,35 @@ flex-direction:column;
 align-items: center;
 
 }
+h1{
+    font-family: cursive;
+    color:yellowgreen;
+    text-shadow:3px 3px rgb(122, 148, 70)  ;
+}
 #input {
     padding: 5px;
     margin :5px;
+    color:rgb(122, 148, 70) ;
+}
+.start-game{
+    padding: 5px ;
+    background-color:yellowgreen ;
+}
+
+.start-game:hover{
+    cursor: pointer;
+    background-color:rgb(122, 148, 70) ;
 }
 
 .winner{
     display:flex;
-    /* justify-content: center; */
+    height: 100%;
 }
 #s-presser ,#l-presser{
     width:48% ; 
     padding :10px;
     text-align: center;
-}
-
+    color:rgb(122, 148, 70) ;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration-style: ;}

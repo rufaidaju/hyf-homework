@@ -4,7 +4,7 @@ let setTimer = function(){
     let seconds= document.getElementById('input').value ;
     console.log(seconds*1000);
     let presser1 = presser2 = 0 ;
-    // console.log(presser1,presser2);
+    //  console.log(presser1,presser2);
     document.addEventListener("keypress",function(event){
         if (event.which == 108){
             presser1 += 1;
@@ -13,12 +13,19 @@ let setTimer = function(){
         }
     })
     setTimeout(function(){
-        $('#s-presser').append('<p>',presser1,'</p>');
-        $('#l-presser').append('<p>',presser2,'</p>')
+        console.log(presser1,presser2);
+
+        $('#l-presser').append('<p>',presser1,'</p>');
+        $('#s-presser').append('<p>',presser2,'</p>');
         if (presser1 > presser2 ){
-            $('#s-presser').append('<p> The Winner</p>');
+            $( '#l-presser' ).addClass( "the-winner" );
+            $('#l-presser').append('<p class="the-winner"> The Winner</p><img src="giphy.gif"  alt="The winner"/>');
+        }else if(presser1 < presser2 ){
+            $('#s-presser' ).addClass( "the-winner" );
+            $('#s-presser').append('<p class="the-winner">The winner</p><img src="giphy.gif"  alt="The winner"/>');
         }else{
-            $('#s-presser').append('<p>The winner</p>');
+            $('#s-presser').append('<p> Equal result</p>');
+            $('#l-presser').append('<p>Equal result</p>')
         }
         console.log('l',presser1);
         console.log('s',presser2)
