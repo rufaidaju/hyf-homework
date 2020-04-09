@@ -16,12 +16,18 @@ h1{
     margin :5px;
     color:rgb(122, 148, 70) ;
 }
-.start-game{
+#start-game,#play-again{
     padding: 5px ;
     background-color:yellowgreen ;
 }
+#play-again{
+    display: none;
+}
+#play-again > a{
+    text-decoration: none;
+}
 
-.start-game:hover{
+#start-game:hover ,#play-again:hover{
     cursor: pointer;
     background-color:rgb(122, 148, 70) ;
 }
@@ -37,4 +43,7 @@ h1{
     color:rgb(122, 148, 70) ;
     font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-decoration-style: ;}
+    }
+.winner-img{
+    max-width: 100%;
+}

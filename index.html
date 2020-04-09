@@ -10,7 +10,9 @@
         <div class="header-content">
             <h1 >Fastest presser</h1>
             <input type="number" id="input" value="Set seconds">
-            <button  class="start-game" onClick="setTimer()" >Start game!</button>
+            <button  id="start-game" onClick="startGame()" >Start game!</button>
+            <button  id="play-again" onClick="startGame()" type = "reset"><a href="">Play again!</a></button>
+            <p id="timer">  </p>
         </div>
     <div class="winner">
         <div id="s-presser">Press S </div>
