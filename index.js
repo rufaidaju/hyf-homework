@@ -1,35 +1,35 @@
 
-
 let startGame = function(){
     document.querySelector("#start-game").style.display ="none";
+    document.querySelector(".input").style.display ="none";
+    
     let seconds= document.querySelector('.input').value ;
-    console.log(seconds*1000);
-    let presser1 = presser2 = 0 ;
+    let presserL = presserS = 0 ;
+    
+    // Count presses L,S
     document.addEventListener("keypress",function(event){
         if (event.which == 108){
-            presser1 += 1;
+            presserL += 1;
         }else if(event.which == 115){
-            presser2 += 1;
+            presserS += 1;
         }
     });
     
     setTimeout(function(){
-        console.log(presser1,presser2);
+        document.querySelector('.l-presser').insertAdjacentHTML('beforeend','<p>',presserL,'</p>');
+        document.querySelector('.s-presser').insertAdjacentHTML('beforeend','<p>',presserS,'</p>');
 
-        $('#l-presser').append('<p>',presser1,'</p>');
-        $('#s-presser').append('<p>',presser2,'</p>');
-        if (presser1 > presser2 ){
-            $('#l-presser').append('<p class="the-winner"> The Winner</p><img class="winner-img" src="giphy.gif"  alt="The winner"/>');
-        }else if(presser1 < presser2 ){
-            $('#s-presser').append('<p class="the-winner">The winner</p><img class="winner-img" src="giphy.gif"  alt="The winner"/>');
+        if (presserL > presserS ){
+            document.querySelector('.l-presser').insertAdjacentHTML('beforeend','<p class="the-winner"> The Winner</p><img class="winner-img" src="giphy.gif"  alt="The winner"/>');
+        }else if(presserL < presserS ){
+            document.querySelector('.s-presser').insertAdjacentHTML('beforeend','<p class="the-winner">The winner</p><img class="winner-img" src="giphy.gif"  alt="The winner"/>');
         }else{
-            $('#s-presser').append('<p> Equal result</p>');
-            $('#l-presser').append('<p>Equal result</p>')
+            document.querySelector('.s-presser').insertAdjacentHTML('beforeend','<p> Equal result</p>');
+            document.querySelector('.l-presser').insertAdjacentHTML('beforeend','<p>Equal result</p>')
         }
-        document.getElementById("play-again").style.display ="block";
-        console.log('l',presser1);
-        console.log('s',presser2)
-
+        document.querySelector("#play-again").style.display ="block";
     },seconds*1000)
 }
-
+   
+let play=document.querySelector("#start-game,#play-again");
+play.addEventListener('click',startGame);
