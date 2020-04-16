@@ -1,11 +1,10 @@
 
 
 let startGame = function(){
-    document.getElementById("start-game").style.display ="none";
-    let seconds= document.getElementById('input').value ;
+    document.querySelector("#start-game").style.display ="none";
+    let seconds= document.querySelector('.input').value ;
     console.log(seconds*1000);
     let presser1 = presser2 = 0 ;
-    //  console.log(presser1,presser2);
     document.addEventListener("keypress",function(event){
         if (event.which == 108){
             presser1 += 1;
@@ -13,15 +12,7 @@ let startGame = function(){
             presser2 += 1;
         }
     });
-    // Add downcount
-    // let timer = seconds;
-    // while (timer!= 0){
-    //     setTimeout(function(){
-    //         document.getElementById("timer").innerHTML = timer ;
-    //         timer -=1;
-    //         console.log(timer,'timer')
-    //     },1000)
-    // }
+    
     setTimeout(function(){
         console.log(presser1,presser2);
 
