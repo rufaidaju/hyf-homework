@@ -18,12 +18,12 @@ class Circle {
         ctx.fill();
     }
 }
-
-const c1 = new Circle(40, 40, 20, 0, 2 * Math.PI, '#889812');
-c1.draw();
-const c2 = new Circle(70, 70, 15, 0, 2 * Math.PI, '#306600');
-c2.draw();
-const c3 = new Circle(90, 90, 10, 0, 2 * Math.PI, '#900000');
-c3.draw();
-const c4 = new Circle(110, 110, 8, 0, 2 * Math.PI, '#999269');
-c4.draw();
+// Draw random circles with random colors evry 100 ms
+setInterval(()=>{
+    let x = Math.floor((Math.random() * 600) + 1);
+    let y = Math.floor((Math.random() * 500) + 1);
+    let radius = Math.ceil((Math.random() * 50) + 1);
+    let fillColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    let circle = new Circle(x,y,radius,0, 2 * Math.PI,fillColor);
+    circle.draw()
+},100)
