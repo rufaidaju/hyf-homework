@@ -1,3 +1,6 @@
+const canvas = document.getElementById('my-canvas');
+canvas.width  = window.innerWidth;
+canvas.height = window.innerHeight;
 class Circle {
     constructor (x,y,radius,sAngle,eAngle,fillColor){
         this.x = x,
@@ -9,8 +12,8 @@ class Circle {
     }
 
     draw(){
-        let canvas = document.getElementById('myCanvas') ,
-        ctx = canvas.getContext('2d');
+        // let myCanvas = document.getElementById('my-canvas');
+        let ctx =  canvas.getContext('2d');
         ctx.beginPath();
         ctx.arc(this.x,this.y,this.radius,this.sAngle,this.eAngle);
         ctx.stroke();
@@ -18,12 +21,14 @@ class Circle {
         ctx.fill();
     }
 }
-// Draw random circles with random colors evry 100 ms
-setInterval(()=>{
-    let x = Math.floor((Math.random() * 600) + 1);
-    let y = Math.floor((Math.random() * 500) + 1);
-    let radius = Math.ceil((Math.random() * 50) + 1);
-    let fillColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-    let circle = new Circle(x,y,radius,0, 2 * Math.PI,fillColor);
-    circle.draw()
-},100)
+// Draw random circles with random colors every 100 ms
+    setInterval(()=>{
+        let x = Math.floor((Math.random() *canvas.width) + 1);
+        let y = Math.floor((Math.random() * canvas.height) + 1);
+        let radius = Math.ceil((Math.random() * 100) + 1);
+        let fillColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+        let circle = new Circle(x,y,radius,0, 2 * Math.PI,fillColor);
+        circle.draw()
+    },100)
+
+
