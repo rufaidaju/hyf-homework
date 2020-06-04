@@ -29,15 +29,21 @@ class ShoppingCart {
 
     getTotal() {
         let totalPrice = 0;
-        this.products.map(product =>{
-            totalPrice = totalPrice + product.price ;
-
+        this.products.forEach(product =>{
+            totalPrice = totalPrice + product.price 
         })
         return totalPrice
     }
 
     renderProducts() {
-        // Implement functionality here
+        const myShoppingCart = document.querySelector('#shopping-cart');
+           let shoppingCartInfo =''
+           this.products.forEach(product => {
+            shoppingCartInfo = shoppingCartInfo + `<li>${product.name} </br> ${product.price}</li>`
+        })
+        shoppingCartInfo = shoppingCartInfo + `<li><em>Total price </br><u> ${this.getTotal()}</u></em></li>`
+
+        myShoppingCart.innerHTML =shoppingCartInfo ;
     }
 
     getUser() {
@@ -58,3 +64,4 @@ shoppingCart.addProduct(bed);
 
 console.log('shoppingCart: ',shoppingCart, 'Total price :',shoppingCart.getTotal());
 // console.log(flatscreen,bed,mobile)
+shoppingCart.renderProducts();
