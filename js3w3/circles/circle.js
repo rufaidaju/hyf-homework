@@ -31,7 +31,7 @@ class Circle {
     //     circle.draw()
     // },100)
 
-// Make the circles appear around the cursor
+// Make the circles appear around the cursor when the mouse move
 
     document.addEventListener('mousemove',(e)=>{
         let x = e.clientX;
