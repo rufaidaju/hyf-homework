@@ -24,8 +24,9 @@ class ShoppingCart {
     }
 
     searchProduct(productName) {
-        // Implement functionality here
-    }
+       let serachResult= this.products.filter(product => product.name === productName);
+       return serachResult
+    } 
 
     getTotal() {
         let totalPrice = 0;
@@ -63,5 +64,5 @@ const bed = new Product('bed', 400);
 shoppingCart.addProduct(bed);
 
 console.log('shoppingCart: ',shoppingCart, 'Total price :',shoppingCart.getTotal());
-// console.log(flatscreen,bed,mobile)
 shoppingCart.renderProducts();
+console.log(shoppingCart.searchProduct('bed'));
