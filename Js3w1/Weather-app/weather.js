@@ -16,7 +16,9 @@ document.addEventListener('submit',(event) => {
     let city=document.querySelector(".input").value;
     fetch (`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4c6a59d89e8a69d593a4a4c996cb6ec1`)
        .then(response => response.json())
-       .then(showWeatherInfo);
+       .then(showWeatherInfo)
+       .catch(() => 
+       document.querySelector('.error').innerHTML = `<p>404 NOT FOUND </p>`)
 })
 
 

@@ -48,3 +48,9 @@ ul li{
     text-align: center;
     color:#b32f12;
 }
+/* Error handling */
+.error{
+    text-align: center;
+    color: red;
+    font-size: larger;
+}
