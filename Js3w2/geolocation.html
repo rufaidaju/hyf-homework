@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation</title>
+    </head>
+    <script> 
+     
+    let setTimeoutPromise = function(timer) {
+        let promise = new Promise((resolve,reject)=> {
+            setTimeout(()=>{
+                resolve(console.log(`Hi guys  IN `) )
+                } , timer * 1000);
+                reject('æææææ')
+        })
+        return promise ;    
+                }
+     
+
+    let getCurrentLocation = ()=>{
+        let currentLocation= new Promise((resolve,reject)=>{resolve(console.log('getCurrentLocation')) })
+        return currentLocation
+    }
+
+
+    setTimeoutPromise(3000)
+    .then(() => {
+        console.log('Called after 3 seconds');
+    }).catch((error)=>{console.log('oooo',error);
+    })
+
+    getCurrentLocation()
+    .then(() => {
+        // called when the users position is found
+        console.log('position');
+    })
+    .catch((error) => {
+        // called if there was an error getting the users location
+        console.log('error');
+    });
+      
+    </script>
+    <body>
+    </body>
+</html>

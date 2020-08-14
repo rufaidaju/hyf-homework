@@ -1,0 +1,44 @@
+.header-content , .add-giphy{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+h1{
+    font-family: cursive;
+    text-shadow:1px 3px rgb(170, 187, 135) ;
+}
+.search-input , .limit-input {
+    padding: 10px;
+    margin :10px;
+    color: rgb(52, 58, 42);
+    box-shadow: 3px 3px #f7eeee;
+}
+
+.search-input:hover , .limit-input:hover {
+    padding: 12px;
+    margin :12px;
+    border:1px solid rgb(177, 118, 10);
+    color: rgb(24, 29, 17);
+    box-shadow: 3px 3px #c5b9b9;
+}
+.search-btn , .search-again {
+    padding: 15px ;
+    background-color:rgb(170, 187, 135);
+}
+
+.search-btn:hover , .search-again:hover {
+    padding: 13px ;
+    background-color:rgb(94, 114, 55);
+}
+
+.search-again{
+    display:none;
+}
+.giphy-img{
+    display: block;
+    border: 16px solid #fff;
+    box-shadow: 4px 4px #f7eeee;
+    width: 23%;
+    height: 23%;
+    margin: 20px;
+}
