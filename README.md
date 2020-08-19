@@ -1,6 +1,4 @@
-# javascript exercise
-
-The fastest presser in this realm:
+Fastest presser:
 
 ## Setup of the game:
 Two users compete about who can press a key the most times within a set time!
