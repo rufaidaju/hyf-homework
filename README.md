@@ -1,4 +1,4 @@
-#Fastest presser:
+# Fastest presser:
 
 ### Setup of the game:
 Two users compete about who can press a key the most times within a set time!
