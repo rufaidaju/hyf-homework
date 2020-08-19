@@ -12,11 +12,9 @@ class Circle {
     }
 
     draw(){
-        // let myCanvas = document.getElementById('my-canvas');
         let ctx =  canvas.getContext('2d');
         ctx.beginPath();
         ctx.arc(this.x,this.y,this.radius,this.sAngle,this.eAngle);
-        // ctx.stroke();
         ctx.fillStyle = this.fillColor;
         ctx.fill();
     }
@@ -31,8 +29,8 @@ class Circle {
     //     circle.draw()
     // },100)
 
-// Make the circles appear around the cursor when the mouse move
 
+// Make the circles appear around the cursor.
     document.addEventListener('mousemove',(e)=>{
         let x = e.clientX;
         let y = e.clientY;
