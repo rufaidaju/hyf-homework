@@ -32,5 +32,17 @@ There are two ways to draw the circles:
 1. create lots of circles in different sizes and colors on a webpage every 100ms.
 1. create lots of circles in different sizes and colors on a webpage and the circles appear around the cursor.
 
+## Shopping cart using Classes:
+There are two classes 
+1. ShoppingCart:
+    (addProduct, removeProduct, getTotal, searchProduct, renderProduct, getUser) 
+    -getTotal: should get the total price of the products in the shoppingcart.
+    -renderProducts should render the products, username and the total price of the products in the shoppingcart.
+    -getUser return a promise with the data from this api: https://jsonplaceholder.typicode.com/users/1
+
+1. Product:
+    convertToCurrency:use an api for getting the price depending on the provided currency .
+
+
 
 
