@@ -1,4 +1,3 @@
-select * from task;
 # 1-Add a task with these attributes: title, description, created, updated, due_date, status_id, user_id 
  #-Insert into task table:
 INSERT INTO task (title, description, created, updated, due_date, status_id)

@@ -1,4 +1,3 @@
-USE hyf_exercise_week2_part3;
 #Get all the tasks assigned to users whose email ends in @spotify.com
 SELECT task.title,user.name,user.email
 FROM ((task INNER JOIN user_task 
