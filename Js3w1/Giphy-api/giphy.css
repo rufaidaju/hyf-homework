@@ -34,6 +34,12 @@ h1{
 .search-again{
     display:none;
 }
+.add-giphy{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .giphy-img{
     display: block;
     border: 16px solid #fff;
