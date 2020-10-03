@@ -16,17 +16,17 @@ function showStatus(activities, date) {
         return "Add some activities before calling showStatus";
     }
     else {
-        //  Is it proplem if I don't use let?
+    //  Is it proplem if I don't use let?
         amount = 0;
         limit = 45;
-        // Calculate how long time the user spend  with all activities at specific time,and how many activities he added.
+    // Calculate how long time the user spend  with all activities at specific time,and how many activities he added.
         for (elem in activities) {
             if (activities[elem].date == date) {
                 amount += activities[elem].duration;
                 activitiesNum += 1;
             }
         }
-        // check if the user reached his limit.
+    // check if the user reached his limit.
         if (amount > limit) {
             return `You have reached your limit in ${date},
             you have spend ${amount} minutes and you have added ${activitiesNum},
@@ -46,7 +46,7 @@ function mostActivity(activities) {
     };
     for (elem in activities) {
         isThere = false;
-        // Check if the activity is already in the using array and check the max duratin.
+    // Check if the activity is already in the using array and check the max duratin.
         for (i in using) {
             if (activities[elem].activity == using[i].activity) {
                 using[i].duration += activities[elem].duration;
@@ -58,7 +58,7 @@ function mostActivity(activities) {
                 break;
             }
         }
-        // Add the activity to th using array if it is not already there
+    // Add the activity to th using array if it is not already there
         if (!isThere) {
             using.push({
                 duration: activities[elem].duration,
@@ -78,7 +78,5 @@ addActivity('Snapchat', 40);
 addActivity('Youtube', 37);
 addActivity('Youtube', 90,'23/7-18');
 addActivity('Facebook', 20),'23/7-18';
-// console.log(activities);
 console.log(showStatus(activities, today.toLocaleDateString("en-US")));
 console.log(showStatus(activities, '23/7-18'));
-// console.log(mostActivity(activities));
