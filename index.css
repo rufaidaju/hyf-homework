@@ -1,0 +1,49 @@
+
+.header-content{
+display: flex;
+flex-direction:column;
+/* justify-content: center; */
+align-items: center;
+
+}
+h1{
+    font-family: cursive;
+    color:yellowgreen;
+    text-shadow:3px 3px rgb(122, 148, 70)  ;
+}
+.input {
+    padding: 5px;
+    margin :5px;
+    color:rgb(122, 148, 70) ;
+}
+#start-game,#play-again{
+    padding: 5px ;
+    background-color:yellowgreen ;
+}
+#play-again{
+    display: none;
+}
+#play-again > a{
+    text-decoration: none;
+}
+
+#start-game:hover ,#play-again:hover{
+    cursor: pointer;
+    background-color:rgb(122, 148, 70) ;
+}
+
+.winner{
+    display:flex;
+    height: 100%;
+}
+.s-presser ,.l-presser{
+    width:48% ; 
+    padding :10px;
+    text-align: center;
+    color:rgb(122, 148, 70) ;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+.winner-img{
+    max-width: 100%;
+}
