@@ -1,37 +1,45 @@
-# Node
+# Javascript exercises
 
-Fullstack development in Node.js:
-Creating and connecting both the backend api and the frontend html, css and javascript.
+## Weather app:
+it's based on a users location can find the relevant weather for that user.
+Using OpenWeatherMap API.
 
-It's done during  4 weeks step by step:
-### Week1:
- -Start with Meal-sharing application.
- -HTTP
- -Introduction to node js
- -Simple webserver
- -Creating routes using express (/meals,/cheap-meals,/large-meals,/meal,/reservations,/reservation)
 
-### Week2:
- -Use express routes to create a small calculator
- -(meals,/meals/{id},/reviews,/reviews/id,/reservations,/reservations/{id})
- -/meals route supports additional query parameters.(maxPrice,title,limit)
+## Giphy app:
+a site where a user can search for any word. 
+When searching a word the application will find a gif using the searched word using the giphy api.
+User can specify how many gif results the user wants.
 
-### Week3:
- -Database connection
- -Building the backend rest api.
+## Bad movies :
+1. Fetch movies from an api
+1. Create an array of bad movies
+1. Creat an array of bad movies since year 2000
 
-## Week4:
- -Connecting the frontend to the api
- -Using fetch to GET, POST, PUT and DELETE data from api
- -Clientside routing
- -Deploy to heroku
+## Resolve after specific time:
+In this exercise I did :
+1. Function return promise that resolves after set time.
+1. Use the function with async/await as well.
+1. Use Promise.all 
+ 
+## Move circles:
+Move the circles from the current random position to the target position :
+1. Translate one by one: translate the circles one at a time from their random start position to their target .
+1. Translate all at once: translate all the circles at the same time from their random start position to their target
+and log All boxes fulfilled out  after each element has been moved.
 
-## Using
-* Node.js
-* Node Package Manager (NPM)
-* require to include modules
-* express to make a RESTful API
-* mysql to connect the API to the backend
-* Connecting the frontend to the backend API
-* Frontend routing(Navigo)
-* Postman
+## Draw circles using classes:
+There are two ways to draw the circles:
+1. create lots of circles in different sizes and colors on a webpage every 100ms.
+1. create lots of circles in different sizes and colors on a webpage and the circles appear around the cursor.
+
+## Shopping cart using Classes:
+There are two classes 
+1. ShoppingCart:
+    (addProduct, removeProduct, getTotal, searchProduct, renderProduct, getUser) 
+    -getTotal: should get the total price of the products in the shoppingcart.
+    -renderProducts should render the products, username and the total price of the products in the shoppingcart.
+    -getUser return a promise with the data from this api: https://jsonplaceholder.typicode.com/users/1
+
+1. Product:
+    convertToCurrency:use an api for getting the price depending on the provided currency .
+

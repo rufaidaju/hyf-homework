@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resolve after </title>
+    </head>
+    <script>  
+        function sayHi (resolveAfter){
+            let promise = new Promise ((resolve,reject) => {
+                setTimeout(()=>{
+                    resolveAfter > 0 ? resolve(console.log(`Hi guys  IN ${resolveAfter}`) ) : reject('The time is not valid')
+                },resolveAfter * 1000)
+            }) 
+            return promise
+        }
+        // ***********************Resolve after time ***************************
+        // sayHi(4)
+        //     .then(() => console.log('I am called asynchronously'))
+        //     .catch((err) => console.log(err))
+        // ****************************Use await********************************
+        async function useAwait (){
+            try{
+                await sayHi(5);
+                console.log('I am called asynchronously');
+            }
+            catch(error){
+                console.log(error)
+            }
+        }
+        useAwait();
+        //****************************Promise.all********************************
+        // let resolveTimes =[sayHi(1),sayHi(2),sayHi(3)]
+        // Promise.all(resolveTimes)
+        //     .then(() => console.log('I am called asynchronously'))
+        //     .catch((err) => console.log(err))
+    </script>
+    <body>
+    </body>
+</html>
